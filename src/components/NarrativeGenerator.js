@@ -30,7 +30,7 @@ function NarrativeGenerator({ data }) {
         }else if(row['Assigned To'].toLowerCase() !== 'mallik' && 
           row['Application'] === 'B2C'){
             dashBoardStatus.push(row['Story Description']+ " is in progress and "+ row['Progress']*100+ "% has been completed")
-        }else if(row['Application'].toLowerCase() === 'SSO'){
+        }else if(row['Application'].toLowerCase() === 'sso'){
             ssoStatus.push(row['Story Description']+ " is in progress and "+ row['Progress']*100+ "% has been completed")
         }else{
           otherStatus.push(row['Story Description']+ " is in progress and "+ row['Progress']*100+ "% has been completed")
