@@ -20,20 +20,20 @@ function NarrativeGenerator({ data }) {
         totalActiveResource.add(row['Assigned To']);
         if(row['Status'].toLowerCase() === 'completed'){
            // completedTask.push(row['Story Description'])+ " has been done";
-           completedTask.push(row['Story Description'] + " has been done");
+           completedTask.push(row['Story Description'] + " has been done.");
            noOfCompletedStories = noOfCompletedStories+1;
            sumOfCompletedStories = sumOfCompletedStories+row['Story Points'];
         } else{
 
         if(row['Assigned To'].toLowerCase() === 'mallik'){
-          loginServiceStatus.push(row['Story Description']+ " is in progress and "+ row['Progress']*100+ "% has been completed");
+          loginServiceStatus.push(row['Story Description']+ " is in progress and "+ row['Progress']*100+ "% has been completed.");
         }else if(row['Assigned To'].toLowerCase() !== 'mallik' && 
           row['Application'] === 'B2C'){
-            dashBoardStatus.push(row['Story Description']+ " is in progress and "+ row['Progress']*100+ "% has been completed")
+            dashBoardStatus.push(row['Story Description']+ " is in progress and "+ row['Progress']*100+ "% has been completed.")
         }else if(row['Application'].toLowerCase() === 'sso'){
-            ssoStatus.push(row['Story Description']+ " is in progress and "+ row['Progress']*100+ "% has been completed")
+            ssoStatus.push(row['Story Description']+ " is in progress and "+ row['Progress']*100+ "% has been completed.")
         }else{
-          otherStatus.push(row['Story Description']+ " is in progress and "+ row['Progress']*100+ "% has been completed")
+          otherStatus.push(row['Story Description']+ " is in progress and "+ row['Progress']*100+ "% has been completed.")
         }
         noOfInProgressStories =  noOfInProgressStories+1;
         sumOfInProgressStories = sumOfInProgressStories+row['Story Points'];
